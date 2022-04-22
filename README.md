@@ -44,7 +44,9 @@ var clientSecret = "<insert-your-client-secret-here>";
 
 var smsPortalClient = new SmsPortalClient(clientId, clientSecret);
 
-await smsPortalClient.Send("0766542813", "Hello World");
+var mobileNumber = "0766542813";
+
+await smsPortalClient.Send(mobileNumber, "Hello World");
 ```
 
 ## License
