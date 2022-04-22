@@ -4,11 +4,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Description>Connect, transact and engage with your customers</Description>
-    <Copyright>2022 Barend Erasmus</Copyright>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageTags>SmsPortal</PackageTags>
-    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

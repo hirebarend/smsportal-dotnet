@@ -9,9 +9,9 @@
     <license type="expression">MIT</license>
     <!-- <icon>icon.png</icon> -->
     <!-- <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl> -->
-    <description>$description$</description>
-    <!-- <releaseNotes>Summary of changes made in this release of the package.</releaseNotes> -->
-    <copyright>$copyright$</copyright>
+    <description>Connect, transact and engage with your customers</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>© 2022 Barend Erasmus</copyright>
     <tags>SmsPortal</tags>
   </metadata>
 </package>
