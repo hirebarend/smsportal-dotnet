@@ -20,11 +20,13 @@ steps:
   inputs:
     command: pack
 - task: DotNetCoreCLI@2
-  displayName: Push
+  displayName: Nuget Push
   inputs:
-    command: push
-    nuGetFeedType: external
-    publishFeedCredentials: 'Nuget (hirebarend)'
+    command: custom
+    custom: nuget
+    arguments: push $(Build.ArtifactStagingDirectory)/*.nupkg
+      -s https://api.nuget.org/v3/index.json
+      -k oy2ppmyhznxiptzcn5fqzzr2ynwpdosexfjyuwopeyktiu
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
