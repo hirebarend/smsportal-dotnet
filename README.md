@@ -29,3 +29,7 @@ From within Visual Studio:
 4. Click on the *Browse* tab and search for "SmsPortal.net".
 5. Click on the SmsPortal.net package, select the appropriate version in the
    right-tab and click *Install*.
+
+[dotnet-core-cli-tools]: https://docs.microsoft.com/en-us/dotnet/core/tools/
+[nuget-cli]: https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference
+[package-manager-console]: https://docs.microsoft.com/en-us/nuget/tools/package-manager-console
