@@ -23,7 +23,8 @@ steps:
   displayName: Push
   inputs:
     command: push
-    publishVstsFeed: '6e7b639b-6337-4cf3-b0ba-e9fcc07be159'
+    nuGetFeedType: external
+    publishFeedCredentials: 'Nuget (hirebarend)'
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
