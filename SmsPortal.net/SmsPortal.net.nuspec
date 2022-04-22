@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>$title$</title>
     <authors>Barend Erasmus</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,6 +12,6 @@
     <description>Connect, transact and engage with your customers</description>
     <releaseNotes>Initial Release</releaseNotes>
     <copyright>© 2022 Barend Erasmus</copyright>
-    <tags>SmsPortal</tags>
+    <tags>sms otp smsportal</tags>
   </metadata>
 </package>
