@@ -33,3 +33,20 @@ From within Visual Studio:
 [dotnet-core-cli-tools]: https://docs.microsoft.com/en-us/dotnet/core/tools/
 [nuget-cli]: https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference
 [package-manager-console]: https://docs.microsoft.com/en-us/nuget/tools/package-manager-console
+
+## Example
+
+```csharp
+using SmsPortal.net;
+
+var clientId = "<insert-your-client-id-here>";
+var clientSecret = "<insert-your-client-secret-here>";
+
+var smsPortalClient = new SmsPortalClient(clientId, clientSecret);
+
+await smsPortalClient.Send("0766542813", "Hello World");
+```
+
+## License
+
+See the LICENSE file.

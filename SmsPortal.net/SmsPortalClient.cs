@@ -7,7 +7,7 @@ using System.Text.Json;
 
 namespace SmsPortal.net
 {
-    public class SmsPortalClient
+    public class SmsPortalClient : IDisposable
     {
         private AuthenticationResponse? _authenticationResponse;
 
@@ -59,6 +59,11 @@ namespace SmsPortal.net
             return authenticationResponse;
         }
 
+        public void Dispose()
+        {
+            _httpClient.Dispose();
+        }
+
         public async Task<double> GetBalance()
         {
             if (_authenticationResponse == null)
@@ -106,8 +111,38 @@ namespace SmsPortal.net
             // var json = await httpResponseMessage.Content.ReadAsStringAsync();
         }
 
+        protected string SanitizeMobileNumber(string mobileNumber)
+        {
+            if (string.IsNullOrWhiteSpace(mobileNumber))
+            {
+                throw new ArgumentNullException(nameof(mobileNumber));
+            }
+
+            mobileNumber = mobileNumber.Replace(" ", "")
+                                        .Replace("-", "")
+                                        .Replace("(", "")
+                                        .Replace(")", "");
+
+            if (mobileNumber.StartsWith("0027"))
+            {
+                mobileNumber = mobileNumber.Substring(2);
+            }
+
+            if (mobileNumber.StartsWith("0"))
+            {
+                mobileNumber = $"27{mobileNumber.Substring(1)}";
+            }
+
+            return mobileNumber;
+        }
+
         public async Task Send(string destination, string content)
         {
+            if (string.IsNullOrWhiteSpace(destination))
+            {
+                throw new ArgumentNullException(nameof(destination));
+            }
+
             var bulkMessagesRequest = new BulkMessagesRequest
             {
                 Messages = new List<Message>
@@ -116,7 +151,7 @@ namespace SmsPortal.net
                     {
                         Content = content,
                         CustomerId = null,
-                        Destination = destination,
+                        Destination = SanitizeMobileNumber(destination),
                         LandingPageVariables = null,
                     }
                 },

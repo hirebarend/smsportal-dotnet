@@ -7,7 +7,7 @@
     <id>$id$</id>
     <license type="expression">MIT</license>
     <readme>docs\README.md</readme>
-    <releaseNotes>Initial Release</releaseNotes>
+    <releaseNotes>Add Example section to readme file</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <version>$version$</version>
     <tags>sms otp smsportal</tags>

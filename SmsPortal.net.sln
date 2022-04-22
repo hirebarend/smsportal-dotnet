@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32414.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsPortal.net", "SmsPortal.net\SmsPortal.net.csproj", "{D1CBF3F7-3D16-432A-9AF7-135C59EA2820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmsPortal.net", "SmsPortal.net\SmsPortal.net.csproj", "{D1CBF3F7-3D16-432A-9AF7-135C59EA2820}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsPortal.net.Tests", "SmsPortal.net.Tests\SmsPortal.net.Tests.csproj", "{4C41C6F4-904B-4F61-BE21-7507072B6031}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmsPortal.net.Tests", "SmsPortal.net.Tests\SmsPortal.net.Tests.csproj", "{4C41C6F4-904B-4F61-BE21-7507072B6031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsPortal.net.Example", "SmsPortal.net.Example\SmsPortal.net.Example.csproj", "{A91CBBCA-DCE3-43C9-974B-E0D30F533128}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4C41C6F4-904B-4F61-BE21-7507072B6031}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C41C6F4-904B-4F61-BE21-7507072B6031}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C41C6F4-904B-4F61-BE21-7507072B6031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A91CBBCA-DCE3-43C9-974B-E0D30F533128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A91CBBCA-DCE3-43C9-974B-E0D30F533128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A91CBBCA-DCE3-43C9-974B-E0D30F533128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A91CBBCA-DCE3-43C9-974B-E0D30F533128}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
