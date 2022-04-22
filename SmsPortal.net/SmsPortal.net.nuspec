@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
     <authors>Barend Erasmus</authors>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <license type="expression">MIT</license>
-    <!-- <icon>icon.png</icon> -->
-    <!-- <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl> -->
-    <description>Connect, transact and engage with your customers</description>
-    <releaseNotes>Initial Release</releaseNotes>
     <copyright>© 2022 Barend Erasmus</copyright>
+    <description>Connect, transact and engage with your customers</description>
+    <id>$id$</id>
+    <license type="expression">MIT</license>
+    <readme>docs\README.md</readme>
+    <releaseNotes>Initial Release</releaseNotes>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <version>$version$</version>
     <tags>sms otp smsportal</tags>
+    <title>$title$</title>
   </metadata>
+  <files>
+    <file src="..\README.md" target="docs\" />
+  </files>
 </package>
