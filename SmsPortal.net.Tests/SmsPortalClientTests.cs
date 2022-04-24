@@ -10,7 +10,7 @@ namespace SmsPortal.net.Tests
         {
             var smsPortalClient = new SmsPortalClient("fdfa1e6e-915f-413b-9d0a-701bea46d1cd", "<client-secret>");
 
-            smsPortalClient.Send("0766542813", "Hello World").GetAwaiter().GetResult();
+            smsPortalClient.SendMessage(new Message("0766542813", "Hello World")).GetAwaiter().GetResult();
         }
 
         [TestMethod]

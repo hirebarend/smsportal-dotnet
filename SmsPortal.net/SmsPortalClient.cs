@@ -1,5 +1,4 @@
-﻿using SmsPortal.net.Models;
-using SmsPortal.net.Requests;
+﻿using SmsPortal.net.Requests;
 using SmsPortal.net.Responses;
 using System.Net.Http.Headers;
 using System.Text;
@@ -136,25 +135,25 @@ namespace SmsPortal.net
             return mobileNumber;
         }
 
-        public async Task Send(string destination, string content)
+        public async Task SendMessage(Message message)
         {
-            if (string.IsNullOrWhiteSpace(destination))
+            await SendMessages(new List<Message>
             {
-                throw new ArgumentNullException(nameof(destination));
-            }
+                message,
+            });
+        }
 
+        public async Task SendMessages(IList<Message> messages)
+        {
             var bulkMessagesRequest = new BulkMessagesRequest
             {
-                Messages = new List<Message>
+                Messages = messages.Select(x => new Models.Message
                 {
-                    new Message
-                    {
-                        Content = content,
-                        CustomerId = null,
-                        Destination = SanitizeMobileNumber(destination),
-                        LandingPageVariables = null,
-                    }
-                },
+                    Content = x.Body,
+                    CustomerId = null,
+                    Destination = SanitizeMobileNumber(x.MobileNumber),
+                    LandingPageVariables = null,
+                }).ToList(),
                 SendOptions = null,
             };
 

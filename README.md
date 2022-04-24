@@ -46,7 +46,7 @@ var smsPortalClient = new SmsPortalClient(clientId, clientSecret);
 
 var mobileNumber = "0766542813";
 
-await smsPortalClient.Send(mobileNumber, "Hello World");
+await smsPortalClient.SendMessage(new Message(mobileNumber, "Hello World"));
 ```
 
 ## License
