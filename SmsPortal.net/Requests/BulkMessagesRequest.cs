@@ -1,4 +1,5 @@
 ﻿using SmsPortal.net.Models;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace SmsPortal.net.Requests
