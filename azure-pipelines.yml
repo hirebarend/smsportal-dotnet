@@ -19,6 +19,7 @@ steps:
   displayName: Pack
   inputs:
     command: pack
+    packagesToPack: SmsPortal.net/SmsPortal.net.csproj
 - task: DotNetCoreCLI@2
   displayName: Nuget Push
   inputs:
